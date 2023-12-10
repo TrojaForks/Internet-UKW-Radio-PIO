@@ -1,0 +1,89 @@
+Sketch uses 1173905 bytes (89%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 49264 bytes (15%) of dynamic memory, leaving 278416 bytes for local variables. Maximum is 327680 bytes.
+python3 /home/peter/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 /tmp/arduino_build_406531/MakeRadio.ino.bootloader.bin 0x8000 /tmp/arduino_build_406531/MakeRadio.ino.partitions.bin 0xe000 /home/peter/.arduino15/packages/esp32/hardware/esp32/2.0.11/tools/partitions/boot_app0.bin 0x10000 /tmp/arduino_build_406531/MakeRadio.ino.bin 
+esptool.py v4.5.1
+Serial port /dev/ttyUSB0
+Connecting......
+Chip is ESP32-D0WDQ6-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 24:d7:eb:32:7d:4c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 921600
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x0012ffff...
+Compressed 18992 bytes to 13112...
+Writing at 0x00001000... (100 %)
+Wrote 18992 bytes (13112 compressed) at 0x00001000 in 0.5 seconds (effective 285.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.1 seconds (effective 336.8 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.1 seconds (effective 448.8 kbit/s)...
+Hash of data verified.
+Compressed 1179648 bytes to 787392...
+Writing at 0x00010000... (2 %)
+Writing at 0x00016baa... (4 %)
+Writing at 0x0001be54... (6 %)
+Writing at 0x00021d66... (8 %)
+Writing at 0x00025d06... (10 %)
+Writing at 0x00029fa4... (12 %)
+Writing at 0x000319c1... (14 %)
+Writing at 0x0003e969... (16 %)
+Writing at 0x0004819b... (18 %)
+Writing at 0x000596f6... (20 %)
+Writing at 0x0005eb5b... (22 %)
+Writing at 0x00064b39... (24 %)
+Writing at 0x00069ed0... (26 %)
+Writing at 0x0006f270... (28 %)
+Writing at 0x0007410f... (30 %)
+Writing at 0x00078ffe... (32 %)
+Writing at 0x0007db77... (34 %)
+Writing at 0x00082811... (36 %)
+Writing at 0x00087f15... (38 %)
+Writing at 0x0008db28... (40 %)
+Writing at 0x000934eb... (42 %)
+Writing at 0x000993fa... (44 %)
+Writing at 0x0009e8cc... (46 %)
+Writing at 0x000a434d... (48 %)
+Writing at 0x000a9470... (51 %)
+Writing at 0x000ae877... (53 %)
+Writing at 0x000b39e2... (55 %)
+Writing at 0x000b8b5c... (57 %)
+Writing at 0x000be018... (59 %)
+Writing at 0x000c3186... (61 %)
+Writing at 0x000c8244... (63 %)
+Writing at 0x000cd77c... (65 %)
+Writing at 0x000d34ed... (67 %)
+Writing at 0x000d8b51... (69 %)
+Writing at 0x000ddd37... (71 %)
+Writing at 0x000e30e5... (73 %)
+Writing at 0x000e83f5... (75 %)
+Writing at 0x000ed84d... (77 %)
+Writing at 0x000f2ec6... (79 %)
+Writing at 0x000f84c7... (81 %)
+Writing at 0x000fdc5d... (83 %)
+Writing at 0x001039bd... (85 %)
+Writing at 0x001092d6... (87 %)
+Writing at 0x00110259... (89 %)
+Writing at 0x001199e4... (91 %)
+Writing at 0x0011f38e... (93 %)
+Writing at 0x001248f5... (95 %)
+Writing at 0x00129e2d... (97 %)
+Writing at 0x0012fa86... (100 %)
+Wrote 1179648 bytes (787392 compressed) at 0x00010000 in 11.9 seconds (effective 794.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+Please run as root
+

@@ -1,0 +1,98 @@
+ *  Executing task: platformio run --target upload 
+
+Processing esp32dev (platform: espressif32; framework: arduino, espidf; board: esp32dev)
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (6.4.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20011.230801 (2.0.11) 
+ - framework-espidf @ 3.40405.230623 (4.4.5) 
+ - tool-cmake @ 3.16.4 
+ - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - tool-ninja @ 1.7.1 
+ - toolchain-esp32ulp @ 1.23500.220830 (2.35.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+Warning! Arduino framework as an ESP-IDF component doesn't handle the `variant` field! The default `esp32` variant will be used.
+Reading CMake configuration...
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32-audioI2S-master @ 2.0.0+sha.71b7523
+|-- Radio @ 3.0.1+sha.470badc
+|-- Noiasca Liquid Crystal @ 2.1.4
+|-- Ai Esp32 Rotary Encoder @ 1.6.0+sha.fd1dbcb
+|-- WiFi @ 2.0.0
+|-- Wire @ 2.0.0
+Building in release mode
+Retrieving maximum program size .pio/build/esp32dev/firmware.elf
+Checking size .pio/build/esp32dev/firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]   5.0% (used 16428 bytes from 327680 bytes)
+Flash: [=====     ]  53.0% (used 555461 bytes from 1048576 bytes)
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Using manually specified: /dev/ttyUSB0
+Uploading .pio/build/esp32dev/firmware.bin
+esptool.py v4.5.1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WDQ6-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 24:d7:eb:32:7d:4c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00010000 to 0x00097fff...
+Compressed 25568 bytes to 16067...
+Writing at 0x00001000... (100 %)
+Wrote 25568 bytes (16067 compressed) at 0x00001000 in 0.8 seconds (effective 240.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 332.1 kbit/s)...
+Hash of data verified.
+Compressed 555824 bytes to 323475...
+Writing at 0x00010000... (5 %)
+Writing at 0x0001d09c... (10 %)
+Writing at 0x0002822a... (15 %)
+Writing at 0x00032afc... (20 %)
+Writing at 0x0003858e... (25 %)
+Writing at 0x0003e101... (30 %)
+Writing at 0x00043c6d... (35 %)
+Writing at 0x00049aab... (40 %)
+Writing at 0x0004ef25... (45 %)
+Writing at 0x000548dc... (50 %)
+Writing at 0x00059fde... (55 %)
+Writing at 0x0005fdba... (60 %)
+Writing at 0x000668f4... (65 %)
+Writing at 0x0006c398... (70 %)
+Writing at 0x000718d5... (75 %)
+Writing at 0x00077041... (80 %)
+Writing at 0x0007c81a... (85 %)
+Writing at 0x00086302... (90 %)
+Writing at 0x0008d85c... (95 %)
+Writing at 0x0009327f... (100 %)
+Wrote 555824 bytes (323475 compressed) at 0x00010000 in 7.8 seconds (effective 570.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+============================================================= [SUCCESS] Took 21.10 seconds =============================================================
+ *  Terminal will be reused by tasks, press any key to close it. 
+
