@@ -71,7 +71,8 @@ extern AiEsp32RotaryEncoder rotaryEncoder;
 
 #ifndef MAKERADIO_H
 #define MAKERADIO_H
-void audio_showstation(const char *info) ;
-void audio_showstreamtitle(const char *info) ;
-void showText(int Spalte, int Zeile, String Text) ;
+void audio_showstation(const char *info);
+void audio_showstreamtitle(const char *info);
+void showText(int Spalte, int Zeile, String Text);
+void audio_info(const char *info);
 #endif

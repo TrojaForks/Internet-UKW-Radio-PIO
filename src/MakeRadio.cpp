@@ -10,6 +10,12 @@ extern "C" void app_main()
 
 void setup() {
   Serial.begin(115200);
+
+  Serial.println("Total heap : " + String( ESP.getHeapSize() ) );
+  Serial.println("Free  heap : " + String( ESP.getFreeHeap() ) );
+  Serial.println("Total PSRAM: " + String( ESP.getPsramSize() ) );
+  Serial.println("Free  PSRAM: " + String( ESP.getFreePsram() ) );
+
   setup_rotary();
   setup_senderList();
   UKW_setup();
@@ -108,3 +114,8 @@ void showText(int Spalte, int Zeile, String Text) {
     lcd.setCursor(Spalte,Zeile);
     lcd.print(Text);
 }
+
+void audio_info(const char *info){
+    Serial.print("info        "); Serial.println(info);
+}
+
