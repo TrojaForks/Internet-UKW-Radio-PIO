@@ -1,12 +1,13 @@
 #include "MakeRadio.h"
 
-
+/*
 extern "C" void app_main()
 {
     // initialize arduino library before we start the tasks
     initArduino();
 
 }
+*/
 
 void setup() {
   Serial.begin(115200);
