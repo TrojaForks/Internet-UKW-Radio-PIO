@@ -47,7 +47,7 @@ void wlan_rotary_loop()
         Serial.print(Stationsnummer);
         audio.connecttohost(stationurl[Stationsnummer]);
     }
-    else {   
+    else {
     if (Stationsnummer < STATIONS && mode == "wlan") {
         //mode = "wlan";
         Serial.print("Active station ");

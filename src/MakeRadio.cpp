@@ -1,16 +1,15 @@
 #include "MakeRadio.h"
 
-/*
-extern "C" void app_main()
-{
-    // initialize arduino library before we start the tasks
-    initArduino();
-
-}
-*/
 
 void setup() {
+
   Serial.begin(115200);
+
+  // Wait for Serial port to open
+  while (!Serial) {
+    delay(10);
+  }
+  delay(500);
 
   Serial.println("Total heap : " + String( ESP.getHeapSize() ) );
   Serial.println("Free  heap : " + String( ESP.getFreeHeap() ) );
@@ -20,8 +19,11 @@ void setup() {
   setup_rotary();
   setup_senderList();
   UKW_setup();
+
+  Serial.println("set Relais LOW");
   pinMode(RELAIS_PIN, OUTPUT);
   digitalWrite(RELAIS_PIN, LOW);
+
   Wire.begin();
   lcd.init();
   lcd.backlight();
@@ -65,7 +67,7 @@ void setup() {
   showText(0,0,String(Stationsnummer+1));
   showText(Stat_Pos_x2,0,stationname[Stationsnummer]);  
 }
- 
+
 void loop()
 {
   // Run audio player
@@ -77,7 +79,7 @@ void loop()
     ukw_rotary_loop();
   }
 }
- 
+
 // Audio status functions
 void audio_showstation(const char *info) {
     if (mode == "wlan") {
@@ -100,7 +102,6 @@ void audio_showstreamtitle(const char *info) {
     Serial.print("Titelname: "); 
     Serial.println(info);
     String Text = info;
-    lcd.setCursor(0,1);
     lcd.setCursor(0,1);
     lcd.print(Text.substring(0,20));
     lcd.setCursor(0,2);
